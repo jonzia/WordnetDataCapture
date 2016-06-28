@@ -28,19 +28,30 @@ public class MainClass {
 	public static void main(String[] args) throws IOException {
 		try {
 			URL url = initializeDictionary();
+			//INSERT WORDS FOR ANALYSIS HERE
 			String[] codewords = {};
 			for(int a = 1; a < codewords.length; a++) {
 				String lookup = codewords[a];
+				//THE CODE BELOW IS CONFIGURED FOR OUTPUTTING MERONYMS. FOR OUTPUTTING HYPERNYMS/HYPONYMS, IT MUST BE MODIFIED.
+				//UNCOMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. COMMENT WHEN OUTPUTTING MERONYMS.
 				//String filename = lookup.concat(".txt");
+				//COMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. UNCOMMENT WHEN OUTPUTTING MERONYMS.
 				String filename2 = lookup.concat(" meronyms.txt");
+				//UNCOMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. COMMENT WHEN OUTPUTTING MERONYMS.
 				//FileWriter writer = new FileWriter(filename, true);
+				//COMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. UNCOMMENT WHEN OUTPUTTING MERONYMS.
 				FileWriter writer2 = new FileWriter(filename2, true);
 				MainClass temp = new MainClass();
+				//UNCOMMENT THE TWO LINES BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. COMMENT WHEN OUTPUTTING MERONYMS.
 				//temp.getHyponyms(lookup, url, writer);
 				//temp.getHypernymTree(lookup, url, writer);
+				//COMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. UNCOMMENT WHEN OUTPUTTING MERONYMS.
 				temp.getMeronyms(lookup, url, writer2);
+				//UNCOMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. COMMENT WHEN OUTPUTTING MERONYMS.
 				//writer.close();
+				//COMMENT THE LINE BELOW WHEN OUTPUTTING HYPERNYMS/HYPONYMS. UNCOMMENT WHEN OUTPUTTING MERONYMS.
 				writer2.close();
+				//You're all set!
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
