@@ -28,25 +28,19 @@ public class MainClass {
 	public static void main(String[] args) throws IOException {
 		try {
 			URL url = initializeDictionary();
-			String[] codewords = {"africa",	"africa",	"agent",	"air",	"alien",	"alp",	"amazon",	"ambulance",	"america",	"angel",	"antarctica",	"apple",	"arm",	"atlantis",	"australia",	"aztec",	"back",	"ball",	"band",	"bank",	"bar",	"bark",	"bat",	"battery",	"beach",	"bear",	"beat",	"bed",	"beijing",	"bell",	"belt",	"berlin",	"bermuda",	"berry",	"bill",	"block",	"board",	"bolt",	"bomb",	"bond",	"boom",	"boot",	"bottle",	"bow",	"box",	"bridge",	"brush",	"buck",	"buffalo",	"bug",	"bugle",	"button",	"calf",	"canada",	"cap",	"capital",	"car",	"card",	"carrot",	"casino",	"cast",	"cat",	"cell",	"centaur",	"center",	"chair",	"change",	"charge",	"check",	"chest",	"chick",	"china",	"chocolate",	"church",	"circle",	"cliff",	"cloak",	"club",	"code",	"cold",	"comic",	"compound",	"concert",	"conductor",	"contract",	"cook",	"copper",	"cotton",	"court",	"cover",	"crane",	"crash",	"cricket",	"cross",	"crown",	"cycle",	"czech",	"dance",	"date",	"day",	"death",	"deck",	"degree",	"diamond",	"dice",	"dinosaur",	"disease",	"doctor",	"dog",	"draft",	"dragon",	"dress",	"drill",	"drop",	"duck",	"dwarf",	"eagle",	"egypt",	"embassy",	"engine",	"england",	"europe",	"eye",	"face",	"fair",	"fall",	"fan",	"fence",	"field",	"fighter",	"figure",	"file",	"film",	"fire",	"fish",	"flute",	"fly",	"foot",	"force",	"forest",	"fork",	"france",	"game",	"gas",	"genius",	"germany",	"ghost",	"giant",	"glass",	"glove",	"gold",	"grace",	"grass",	"greece",	"green",	"ground",	"ham",	"hand",	"hawk",	"head",	"heart",	"helicopter",	"himalayas",	"hole",	"hollywood",	"honey",	"hood",	"hook",	"horn",	"horse",	"horseshoe",	"hospital",	"hotel",	"ice",	"ice cream",	"india",	"iron",	"ivory",	"jack",	"jam",	"jet",	"jupiter",	"kangaroo",	"ketchup",	"key",	"kid",	"king",	"kiwi",	"knife",	"knight",	"lab",	"lap",	"laser",	"lawyer",	"lead",	"lemon",	"leprechaun",	"life",	"light",	"limousine",	"line",	"link",	"lion",	"litter",	"loch ness",	"lock",	"log",	"london",	"luck",	"mail",	"mammoth",	"maple",	"marble",	"march",	"mass",	"match",	"mercury",	"mexico",	"microscope",	"millionaire",	"mine",	"mint",	"missile",	"model",	"mole",	"moon",	"moscow",	"mount",	"mouse",	"mouth",	"mug",	"nail",	"needle",	"net",	"new york",	"night",	"ninja",	"note",	"novel",	"nurse",	"nut",	"octopus",	"oil",	"olive",	"olympus",	"opera",	"orange",	"organ",	"palm",	"pan",	"pants",	"paper",	"parachute",	"park",	"part",	"pass",	"paste",	"penguin",	"phoenix",	"piano",	"pie",	"pilot",	"pin",	"pipe",	"pirate",	"pistol",	"pit",	"pitch",	"plane",	"plastic",	"plate",	"platypus",	"play",	"plot",	"point",	"poison",	"pole",	"police",	"pool",	"port",	"post",	"pound",	"press",	"princess",	"pumpkin",	"pupil",	"pyramid",	"queen",	"rabbit",	"racket",	"ray",	"revolution",	"ring",	"robin",	"robot",	"rock",	"rome",	"root",	"rose",	"roulette",	"round",	"row",	"ruler",	"satellite",	"saturn",	"scale",	"school",	"scientist",	"scorpion",	"screen",	"scuba diver",	"seal",	"server",	"shadow",	"shakespeare",	"shark",	"ship",	"shoe",	"shop",	"shot",	"sink",	"skyscraper",	"slip",	"slug",	"smuggler",	"snow",	"snowman",	"sock",	"soldier",	"soul",	"sound",	"space",	"spell",	"spider",	"spike",	"spine",	"spot",	"spring",	"spy",	"square",	"stadium",	"staff",	"star",	"state",	"stick",	"stock",	"straw",	"stream",	"strike",	"string",	"sub",	"suit",	"hero",	"swing",	"switch",	"table",	"tablet",	"tag",	"tail",	"tap",	"teacher",	"telescope",	"temple",	"theater",	"thief",	"thumb",	"tick",	"tie",	"time",	"tokyo",	"tooth",	"torch",	"tower",	"track",	"train",	"triangle",	"trip",	"trunk",	"tube",	"turkey",	"undertaker",	"unicorn",	"vacuum",	"van",	"vet",	"wake",	"wall",	"war",	"washer",	"washington",	"watch",	"water",	"wave",	"web",	"well",	"whale",	"whip",	"wind",	"witch",	"worm",	"yard",};
+			String[] codewords = {};
 			for(int a = 1; a < codewords.length; a++) {
 				String lookup = codewords[a];
 				//String filename = lookup.concat(".txt");
-				//String filename2 = lookup.concat(" weights.txt");
-				String filename3 = lookup.concat(" meronyms.txt");
-				String filename4 = lookup.concat(" meronym weights.txt");
-				//FileWriter writer2 = new FileWriter(filename2, true);
+				String filename2 = lookup.concat(" meronyms.txt");
 				//FileWriter writer = new FileWriter(filename, true);
-				FileWriter writer3 = new FileWriter(filename3, true);
-				FileWriter writer4 = new FileWriter(filename4, true);
+				FileWriter writer2 = new FileWriter(filename2, true);
 				MainClass temp = new MainClass();
-				//temp.getHyponyms(lookup, url, writer, writer2);
-				//temp.getHypernymTree(lookup, url, writer, writer2);
-				temp.getMeronyms(lookup, url, writer3, writer4);
+				//temp.getHyponyms(lookup, url, writer);
+				//temp.getHypernymTree(lookup, url, writer);
+				temp.getMeronyms(lookup, url, writer2);
 				//writer.close();
-				//writer2.close();
-				writer3.close();
-				writer4.close();
+				writer2.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -113,14 +107,10 @@ public class MainClass {
 		
 		System.out.println(codename);
 		writer.write(codename);
-		writer2.write(codename);
 		writer.write("\n");
-		writer2.write("\n");
 		System.out.println("~");
 		writer.write("~");
-		writer2.write("~");
 		writer.write("\n");
-		writer2.write("\n");
 		// Look up first sense of the word
 		int j = getNumSyn(codename, url);
 		for(int k = 0; k < j; k++) {
@@ -138,9 +128,7 @@ public class MainClass {
 					String print = i.next().getLemma();
 					System.out.println(print);
 					writer.write(print);
-					writer2.write("0.5");
 					writer.write("\n");
-					writer2.write("\n");
 				}
 			}
 		}
@@ -158,9 +146,7 @@ public class MainClass {
 			int counter2 = 0; // Counter for adding values to array
 			System.out.println("~");
 			writer.write("~");
-			writer2.write("~");
 			writer.write("\n");
-			writer2.write("\n");
 			for(int l = 0; l < array.length; l++) {
 				if(array[l] != null) {
 					// Look up first sense of the word
@@ -213,9 +199,7 @@ public class MainClass {
 									System.out.println(temp1);
 									writer.write(temp1);
 									int print = treeCounter;
-									writer2.write(Integer.toString(print));
 									writer.write("\n");
-									writer2.write("\n");
 								}
 							}
 						}
@@ -246,15 +230,11 @@ public class MainClass {
 		dict.open();
 		
 		System.out.println(codename);
-		writer3.write(codename);
-		writer4.write(codename);
-		writer3.write("\n");
-		writer4.write("\n");
+		writer2.write(codename);
+		writer2.write("\n");
 		System.out.println("~");
-		writer3.write("~");
-		writer4.write("~");
-		writer3.write("\n");
-		writer4.write("\n");
+		writer2.write("~");
+		writer2.write("\n");
 		// Look up first sense of the word
 		int j = getNumSyn(codename, url);
 		for(int k = 0; k < j; k++) {
@@ -271,10 +251,8 @@ public class MainClass {
 				for(Iterator <IWord> i = words.iterator(); i.hasNext();) {
 					String print = i.next().getLemma();
 					System.out.println(print);
-					writer3.write(print);
-					writer4.write("0.5");
-					writer3.write("\n");
-					writer4.write("\n");
+					writer2.write(print);
+					writer2.write("\n");
 				}
 			}
 		}
